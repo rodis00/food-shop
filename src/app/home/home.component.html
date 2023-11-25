@@ -1,8 +1,8 @@
 <ul>
-  @for(food of foods; track food) {
+  @for(food of foods; track food.id) {
   <li>
     <a href="">
-      <img src="{{ food }}" alt="" />
+      <img src="{{ food.imageUrl }}" alt="" />
     </a>
   </li>
   }
