@@ -4,16 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class FoodService {
-  constructor() {}
+  images: String[] = [
+    '/assets/images/food/food-1.jpg',
+    '/assets/images/food/food-2.jpg',
+    '/assets/images/food/food-3.jpg',
+    '/assets/images/food/food-4.jpg',
+    '/assets/images/food/food-5.jpg',
+    '/assets/images/food/food-6.jpg',
+  ];
 
   getAll(): String[] {
-    return [
-      '/assets/images/food/food-1.jpg',
-      '/assets/images/food/food-2.jpg',
-      '/assets/images/food/food-3.jpg',
-      '/assets/images/food/food-4.jpg',
-      '/assets/images/food/food-5.jpg',
-      '/assets/images/food/food-6.jpg',
-    ];
+    return this.images;
   }
 }
