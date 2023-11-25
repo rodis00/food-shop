@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class FoodService {
-  images: String[] = [
+  images: string[] = [
     '/assets/images/foods/food-1.jpg',
     '/assets/images/foods/food-2.jpg',
     '/assets/images/foods/food-3.jpg',
@@ -13,7 +13,7 @@ export class FoodService {
     '/assets/images/foods/food-6.jpg',
   ];
 
-  getAll(): String[] {
+  getAll(): string[] {
     return this.images;
   }
 }
