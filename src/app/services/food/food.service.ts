@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class FoodService {
   images: String[] = [
-    '/assets/images/food/food-1.jpg',
-    '/assets/images/food/food-2.jpg',
-    '/assets/images/food/food-3.jpg',
-    '/assets/images/food/food-4.jpg',
-    '/assets/images/food/food-5.jpg',
-    '/assets/images/food/food-6.jpg',
+    '/assets/images/foods/food-1.jpg',
+    '/assets/images/foods/food-2.jpg',
+    '/assets/images/foods/food-3.jpg',
+    '/assets/images/foods/food-4.jpg',
+    '/assets/images/foods/food-5.jpg',
+    '/assets/images/foods/food-6.jpg',
   ];
 
   getAll(): String[] {
