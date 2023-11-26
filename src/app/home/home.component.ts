@@ -4,13 +4,14 @@ import { FoodService } from '../services/food/food.service';
 import { Food } from '../shared/models/Food';
 import { StarRatingComponent } from '../components/partials/star-rating/star-rating.component';
 import { ActivatedRoute } from '@angular/router';
+import { SearchComponent } from '../search/search.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  imports: [CommonModule, StarRatingComponent],
+  imports: [CommonModule, StarRatingComponent, SearchComponent],
 })
 export class HomeComponent {
   foods: Food[] = [];
