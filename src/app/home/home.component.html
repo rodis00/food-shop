@@ -7,7 +7,7 @@
         <div class="name">
           {{ food.name }}
         </div>
-        <span class="{{ food.favorite ? 'favorite' : 'not' }}"> ❤ </span>
+        <span class="favorite {{ food.favorite ? '' : 'not' }}"> ❤ </span>
         <div class="stars">
           <app-star-rating [stars]="food.stars" [size]="1.8" />
         </div>
