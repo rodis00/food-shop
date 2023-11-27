@@ -33,6 +33,10 @@ export class FoodService {
         );
   }
 
+  getFoodById(id: number): Food {
+    return this.foods.find((food) => food.id == id)!;
+  }
+
   getAll(): Food[] {
     return this.foods;
   }

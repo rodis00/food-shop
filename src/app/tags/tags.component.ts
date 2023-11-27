@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Tag } from '../shared/models/Tag';
 import { RouterLink } from '@angular/router';
@@ -12,9 +12,13 @@ import { FoodService } from '../services/food/food.service';
   styleUrl: './tags.component.css',
 })
 export class TagsComponent {
-  tags: Tag[] = [];
+  tags?: Tag[];
+  @Input()
+  foodPageTags?: string[];
 
   constructor(private foodService: FoodService) {
-    this.tags = this.foodService.getAllTags();
+    if (!this.foodPageTags) {
+      this.tags = this.foodService.getAllTags();
+    }
   }
 }

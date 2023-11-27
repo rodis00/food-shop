@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FoodService } from '../services/food/food.service';
 import { Food } from '../shared/models/Food';
 import { StarRatingComponent } from '../components/partials/star-rating/star-rating.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 import { TagsComponent } from '../tags/tags.component';
 
@@ -12,7 +12,13 @@ import { TagsComponent } from '../tags/tags.component';
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  imports: [CommonModule, StarRatingComponent, SearchComponent, TagsComponent],
+  imports: [
+    CommonModule,
+    StarRatingComponent,
+    SearchComponent,
+    TagsComponent,
+    RouterLink,
+  ],
 })
 export class HomeComponent {
   foods: Food[] = [];
