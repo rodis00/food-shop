@@ -1,11 +1,11 @@
 @if(tags) {
-<div>
+<div [style.justifyContent]="justifyContent">
   @for (tag of tags; track tag) {
   <a routerLink="/tag/{{ tag.name }}"> {{ tag.name }} ({{ tag.count }}) </a>
   }
 </div>
 } @if(foodPageTags) {
-<div>
+<div [style.justifyContent]="justifyContent">
   @for (tagName of foodPageTags; track tagName) {
   <a routerLink="/tag/{{ tagName }}"> {{ tagName }}</a>
   }

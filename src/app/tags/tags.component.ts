@@ -13,8 +13,12 @@ import { FoodService } from '../services/food/food.service';
 })
 export class TagsComponent {
   tags?: Tag[];
+
   @Input()
   foodPageTags?: string[];
+
+  @Input()
+  justifyContent: string = 'center';
 
   constructor(private foodService: FoodService) {
     if (!this.foodPageTags) {
