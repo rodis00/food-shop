@@ -1,3 +1,9 @@
+<app-not-found
+  [visible]="!cart || cart.items.length <= 0"
+  notFoundMessage="Cart Page Is Empty!"
+  resetLinkText="Go To Homepage."
+></app-not-found>
+@if (cart && cart.items.length > 0) {
 <div class="container">
   <ul>
     @for (cartItem of cart.items; track cartItem) {
@@ -44,3 +50,4 @@
     </div>
   </div>
 </div>
+}

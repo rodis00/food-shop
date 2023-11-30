@@ -1,3 +1,9 @@
+<app-not-found
+  [visible]="!food"
+  notFoundMessage="Product Not Found!"
+  resetLinkText="Back To Home Page"
+></app-not-found>
+@if (food) {
 <div class="container">
   <img [src]="food.imageUrl" [alt]="food.name" />
   <div class="details">
@@ -31,3 +37,4 @@
     <button (click)="addToCart()">Add To Cart</button>
   </div>
 </div>
+}

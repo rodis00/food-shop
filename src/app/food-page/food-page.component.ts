@@ -6,13 +6,19 @@ import { FoodService } from '../services/food/food.service';
 import { StarRatingComponent } from '../components/partials/star-rating/star-rating.component';
 import { TagsComponent } from '../tags/tags.component';
 import { CartService } from '../services/cart/cart.service';
+import { NotFoundComponent } from '../not-found/not-found.component';
 
 @Component({
   selector: 'app-food-page',
   standalone: true,
   templateUrl: './food-page.component.html',
   styleUrl: './food-page.component.css',
-  imports: [CommonModule, StarRatingComponent, TagsComponent],
+  imports: [
+    CommonModule,
+    StarRatingComponent,
+    TagsComponent,
+    NotFoundComponent,
+  ],
 })
 export class FoodPageComponent {
   food!: Food;
